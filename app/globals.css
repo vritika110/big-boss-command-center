@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background-color: #07060f;
+  background-image: linear-gradient(rgba(0,229,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,43,214,.05) 1px, transparent 1px);
+  background-size: 36px 36px;
+  color: #e6e6f5;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@keyframes pop { from { transform: scale(.85); opacity: 0 } to { transform: scale(1); opacity: 1 } }
+@keyframes slide { from { transform: translateX(40px); opacity: 0 } to { transform: none; opacity: 1 } }
+.pop { animation: pop .25s ease-out }
+.slide { animation: slide .25s ease-out }
+@media (prefers-reduced-motion: reduce) { .pop, .slide { animation: none } }
